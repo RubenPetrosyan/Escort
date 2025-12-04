@@ -1,29 +1,32 @@
-import "./globals.css";
-import type { Metadata } from "next";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-
-export const metadata: Metadata = {
-  title: "Luxury Companion | Elegant & Exclusive",
+export const metadata = {
+  title: "Luxury Companion Los Angeles — Elegant & Discreet",
   description:
-    "A luxury, feminine, elegant companion experience. High-end, discreet, and exclusive.",
-  icons: {
-    icon: "/logo.png", // make sure your logo file is named logo.png
+    "Elite luxury companion available in Los Angeles, Glendale, Burbank, and Pasadena. Elegant, feminine, upscale companionship with complete discretion.",
+  metadataBase: new URL("https://escort-iota-sage.vercel.app"),
+
+  openGraph: {
+    title: "Luxury Escort Companion — Los Angeles & Glendale Area",
+    description:
+      "Exclusive luxury companionship in Los Angeles, Glendale, Burbank, and Pasadena. Feminine, elegant, discreet, and unforgettable.",
+    url: "https://escort-iota-sage.vercel.app",
+    siteName: "Luxury Companion",
+    images: [
+      {
+        url: "/og-image.jpg",   // ← this must match the real filename
+        width: 1200,
+        height: 630,
+        alt: "Luxury Companion — Elegant & Discreet Upscale Experience",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Luxury Companion Los Angeles",
+    description:
+      "Elegant upscale companionship in Los Angeles and Glendale area.",
+    images: ["/og-image.jpg"],
   },
 };
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <html lang="en">
-      <body className="bg-background text-foreground">
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
-      </body>
-    </html>
-  );
-}
