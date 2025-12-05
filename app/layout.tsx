@@ -1,10 +1,13 @@
-import "./globals.css";
 import type { Metadata } from "next";
+import "./globals.css";
+
+// Import your Navbar and Footer components
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Luxury Companion Los Angeles — Elegant & Discreet",
-  description:
-    "Elite luxury companion available in Los Angeles, Glendale, Burbank, and Pasadena. Elegant, feminine, upscale companionship with complete discretion.",
+  title: "Escort Website",
+  description: "Professional escort services website built with Next.js",
 };
 
 export default function RootLayout({
@@ -14,7 +17,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {/* Navigation Bar (Global) */}
+        <Navbar />
+
+        {/* Page Content */}
+        <main>{children}</main>
+
+        {/* Footer (Global) */}
+        <Footer />
+      </body>
     </html>
   );
 }
