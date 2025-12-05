@@ -5,42 +5,13 @@ export const metadata: Metadata = {
   title: "Luxury Companion Los Angeles — Elegant & Discreet",
   description:
     "Elite luxury companion available in Los Angeles, Glendale, Burbank, and Pasadena. Elegant, feminine, upscale companionship with complete discretion.",
-
-  // Temporary placeholder until deployment completes
-  metadataBase: new URL("https://example.com"),
-
-  openGraph: {
-    title: "Luxury Escort Companion — Los Angeles & Glendale Area",
-    description:
-      "Exclusive luxury companionship in Los Angeles, Glendale, Burbank, and Pasadena. Feminine, elegant, discreet, and unforgettable.",
-    url: "https://example.com",
-    siteName: "Luxury Companion",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Luxury Companion — Elegant & Discreet Upscale Experience",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-
-  twitter: {
-    card: "summary_large_image",
-    title: "Luxury Companion Los Angeles",
-    description:
-      "Elegant upscale companionship in Los Angeles and Glendale area.",
-    images: ["/og-image.jpg"],
-  },
 };
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="en">
       <body>{children}</body>
