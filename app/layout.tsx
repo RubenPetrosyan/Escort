@@ -1,4 +1,7 @@
-export const metadata = {
+import "./globals.css";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
   title: "Luxury Companion Los Angeles — Elegant & Discreet",
   description:
     "Elite luxury companion available in Los Angeles, Glendale, Burbank, and Pasadena. Elegant, feminine, upscale companionship with complete discretion.",
@@ -12,7 +15,7 @@ export const metadata = {
     siteName: "Luxury Companion",
     images: [
       {
-        url: "/og-image.jpg",   // ← this must match the real filename
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Luxury Companion — Elegant & Discreet Upscale Experience",
@@ -30,3 +33,15 @@ export const metadata = {
     images: ["/og-image.jpg"],
   },
 };
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  );
+}
