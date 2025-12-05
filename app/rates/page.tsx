@@ -1,3 +1,5 @@
+export const revalidate = 0;
+
 import Head from "next/head";
 
 export default function RatesPage() {
