@@ -5,13 +5,15 @@ export const metadata: Metadata = {
   title: "Luxury Companion Los Angeles — Elegant & Discreet",
   description:
     "Elite luxury companion available in Los Angeles, Glendale, Burbank, and Pasadena. Elegant, feminine, upscale companionship with complete discretion.",
-  metadataBase: new URL("https://escort-iota-sage.vercel.app"),
+
+  // Temporary placeholder until deployment completes
+  metadataBase: new URL("https://example.com"),
 
   openGraph: {
     title: "Luxury Escort Companion — Los Angeles & Glendale Area",
     description:
       "Exclusive luxury companionship in Los Angeles, Glendale, Burbank, and Pasadena. Feminine, elegant, discreet, and unforgettable.",
-    url: "https://escort-iota-sage.vercel.app",
+    url: "https://example.com",
     siteName: "Luxury Companion",
     images: [
       {
