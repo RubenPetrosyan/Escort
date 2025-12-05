@@ -1,3 +1,5 @@
+export const revalidate = 0;
+
 import Image from "next/image";
 
 export default function GalleryPage() {
