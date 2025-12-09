@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-// Import your Navbar and Footer components
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
-  title: "Escort Website",
-  description: "Professional escort services website built with Next.js",
+  title: "Elegant. Feminine. Exclusive.",
+  description: "Luxury companion in Los Angeles.",
 };
 
 export default function RootLayout({
@@ -17,14 +16,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        {/* Navigation Bar (Global) */}
+      <body className="relative">
+        {/* Global Navbar */}
         <Navbar />
 
-        {/* Page Content */}
-        <main>{children}</main>
+        {/* Main Content — padded so it's not hidden behind fixed navbar */}
+        <main className="pt-20">
+          {children}
+        </main>
 
-        {/* Footer (Global) */}
+        {/* Global Footer */}
         <Footer />
       </body>
     </html>

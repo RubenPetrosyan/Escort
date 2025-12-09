@@ -14,11 +14,12 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/">
           <Image
-            src="/logo.png"     // Make sure this matches your file name
+            src="/logo.png"
             alt="Logo"
             width={60}
             height={60}
             className="cursor-pointer"
+            priority
           />
         </Link>
 
@@ -32,16 +33,17 @@ export default function Navbar() {
           <Link href="/contact">Contact</Link>
         </div>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Toggle Button */}
         <button
           onClick={() => setOpen(!open)}
           className="md:hidden text-2xl p-2"
+          aria-label="Toggle Menu"
         >
           {open ? "✕" : "☰"}
         </button>
       </div>
 
-      {/* Mobile Dropdown */}
+      {/* Mobile Dropdown Menu */}
       {open && (
         <div className="md:hidden bg-white/90 backdrop-blur-md shadow-lg">
           <div className="flex flex-col text-lg p-5 gap-4">
