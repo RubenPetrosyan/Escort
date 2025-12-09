@@ -1,35 +1,26 @@
-import Head from "next/head";
-import Hero from "../components/Hero";
+import Hero from "@/components/Hero";
 import Link from "next/link";
+
+export const metadata = {
+  title:
+    "Luxury Companion Los Angeles | High-End Private Model in Glendale, Burbank & Pasadena",
+  description:
+    "Elite luxury companion and high-end private model serving Los Angeles, Glendale, Burbank, Pasadena and surrounding areas. Elegant, discreet, upscale companionship for dinners, social events, travel and exclusive experiences.",
+  keywords:
+    "luxury companion Los Angeles, Glendale private companion, Burbank upscale companion, Pasadena elite companion, LA high-end companion, luxury model companion, elite dinner date Los Angeles",
+  openGraph: {
+    title: "Luxury Companion in Los Angeles",
+    description:
+      "Experience refined, elegant and exclusive luxury companionship in Los Angeles, Glendale, Burbank and Pasadena.",
+    url: "https://your-domain.com",
+    type: "website",
+  },
+  robots: "index, follow",
+};
 
 export default function HomePage() {
   return (
-    <>
-      {/* ===== META TAGS FOR SEO ===== */}
-      <Head>
-        <title>Luxury Companion Los Angeles | High-End Private Model in Glendale, Burbank & Pasadena</title>
-
-        <meta
-          name="description"
-          content="Elite luxury companion and high-end private model serving Los Angeles, Glendale, Burbank, Pasadena and surrounding areas. Elegant, discreet, upscale companionship for dinners, social events, travel and exclusive one-on-one experiences."
-        />
-
-        <meta
-          name="keywords"
-          content="luxury companion Los Angeles, Glendale private companion, Burbank upscale companion, Pasadena elite companion, LA high-end companion, luxury model companion, elite dinner date Los Angeles"
-        />
-
-        <meta property="og:title" content="Luxury Companion in Los Angeles" />
-        <meta
-          property="og:description"
-          content="Experience refined, elegant and exclusive luxury companionship in Los Angeles, Glendale, Burbank and Pasadena."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://your-domain.com" />
-
-        <meta name="robots" content="index, follow" />
-      </Head>
-
+    <main>
       {/* ===== HERO SECTION ===== */}
       <Hero />
 
@@ -61,10 +52,10 @@ export default function HomePage() {
       {/* ===== SERVICES PREVIEW ===== */}
       <section className="section-container py-24">
         <h2 className="text-4xl font-serif text-center mb-4">What I Offer</h2>
+
         <div className="separator mx-auto"></div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-10">
-
           <div className="p-8 bg-white rounded-xl shadow-md">
             <h3 className="font-serif text-2xl mb-3">Elegant Dinner Dates</h3>
             <p className="text-text-secondary">
@@ -75,7 +66,9 @@ export default function HomePage() {
           </div>
 
           <div className="p-8 bg-white rounded-xl shadow-md">
-            <h3 className="font-serif text-2xl mb-3">Social Events & Functions</h3>
+            <h3 className="font-serif text-2xl mb-3">
+              Social Events & Functions
+            </h3>
             <p className="text-text-secondary">
               An elegant presence for galas, private gatherings, corporate
               events, birthdays and premium social occasions. Sophistication in
@@ -91,7 +84,6 @@ export default function HomePage() {
               select destinations.
             </p>
           </div>
-
         </div>
 
         <div className="text-center mt-12">
@@ -125,6 +117,6 @@ export default function HomePage() {
           Get in Touch
         </Link>
       </section>
-    </>
+    </main>
   );
 }
