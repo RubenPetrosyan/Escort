@@ -14,6 +14,14 @@ export const metadata = {
       "Experience refined, elegant and exclusive luxury companionship in Los Angeles, Glendale, Burbank and Pasadena.",
     url: "https://your-domain.com",
     type: "website",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Luxury Companion Los Angeles",
+      },
+    ],
   },
   robots: "index, follow",
 };
@@ -21,10 +29,9 @@ export const metadata = {
 export default function HomePage() {
   return (
     <main>
-      {/* ===== HERO SECTION ===== */}
       <Hero />
 
-      {/* ===== INTRODUCTION SECTION ===== */}
+      {/* Introduction */}
       <section className="section-container py-20 text-center">
         <h2 className="text-4xl font-serif mb-4">
           Luxury Companion in Los Angeles
@@ -49,7 +56,7 @@ export default function HomePage() {
         </p>
       </section>
 
-      {/* ===== SERVICES PREVIEW ===== */}
+      {/* Services Preview */}
       <section className="section-container py-24">
         <h2 className="text-4xl font-serif text-center mb-4">What I Offer</h2>
 
@@ -96,7 +103,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== CALL TO ACTION SECTION ===== */}
+      {/* CTA Section */}
       <section className="w-full py-20 bg-lux-pink-light text-center">
         <h2 className="text-4xl font-serif mb-4">
           Your Luxury Experience Awaits
